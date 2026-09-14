@@ -1,0 +1,72 @@
+{
+ "model": "M4_parsimonious_allsex",
+ "features": [
+  "sex",
+  "age",
+  "bmi",
+  "wbc",
+  "hb",
+  "ast",
+  "tc",
+  "fbg",
+  "egfr"
+ ],
+ "units": "SI (hb g/L, tc mmol/L, fbg mmol/L); sex: 1=male, 2=female (NHANES coding)",
+ "training_set": "NHANES all-sex >=40y, n=5217, events=492 (9.4%), identical analytic sample as M1",
+ "intercept": -0.5883204943764132,
+ "coefficients": {
+  "sex": 0.6889,
+  "age": 0.8569,
+  "bmi": -0.7296,
+  "wbc": 0.1432,
+  "hb": -0.0165,
+  "ast": 0.0644,
+  "tc": 0.0763,
+  "fbg": -0.0264,
+  "egfr": 0.2691
+ },
+ "scaler_mean": {
+  "sex": 1.5085,
+  "age": 59.696,
+  "bmi": 28.8915,
+  "wbc": 6.7383,
+  "hb": 142.0542,
+  "ast": 26.2396,
+  "tc": 5.1387,
+  "fbg": 6.2011,
+  "egfr": 85.7757
+ },
+ "scaler_scale": {
+  "sex": 0.4999,
+  "age": 12.3162,
+  "bmi": 6.0095,
+  "wbc": 2.472,
+  "hb": 15.3884,
+  "ast": 15.107,
+  "tc": 1.0595,
+  "fbg": 2.028,
+  "egfr": 20.1523
+ },
+ "impute_constants_NHANES_median": {
+  "sex": 2.0,
+  "age": 60.0,
+  "bmi": 28.0,
+  "wbc": 6.4,
+  "hb": 143.0,
+  "ast": 23.0,
+  "tc": 5.09,
+  "fbg": 5.66,
+  "egfr": 88.9
+ },
+ "class_weight": {
+  "w1": 5.3018,
+  "w0": 0.5521
+ },
+ "probability_recovery": "p_natural = expit(logit(p_balanced) - log(w1/w0))",
+ "locked_threshold_source_OOF_Youden": 0.1043,
+ "internal_OOF_AUC": 0.7954,
+ "internal_OOF_AUC_women": 0.773,
+ "internal_OOF_AUC_men": 0.712,
+ "frozen_before": "any contact with KNHANES male data (frozen 2026-09-11)",
+ "purpose": "KNHANES all-sex extension module: cross-national replication of sex heterogeneity"
+}

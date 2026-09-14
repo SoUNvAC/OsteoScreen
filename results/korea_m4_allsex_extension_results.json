@@ -1,0 +1,72 @@
+{
+ "module": "M4 韩国全性别扩展（预注册 2026-09-11，冻结先于男性数据接触）",
+ "cohort": {
+  "KNHANES_men_n": 3154,
+  "men_events_primary": 436,
+  "men_prev_primary": 0.138,
+  "men_events_asia": 255,
+  "men_prev_asia": 0.081,
+  "men_age": "63.4±8.5 (50-80)",
+  "years_men": {
+   "2009": 1413,
+   "2010": 1221,
+   "2011": 520
+  },
+  "allsex_total_n": 7207
+ },
+ "primary_label_convention": "NHANES III 统一年轻白人女性参照 (FN 0.858/0.120; LS 1.047/0.110)——与NHANES训练标签逐位同一约定（已反推验证），符合ISCD/WHO国际标准；男性亚洲男性参照为敏感性标签",
+ "main_results": {
+  "M4_women_AUC": 0.784,
+  "M4_men_AUC": 0.728,
+  "M4_pooled_AUC": 0.822,
+  "pooled_note": "合并AUC受性别变量机械抬高，分层值为主",
+  "OSTA_women": 0.8,
+  "OSTA_men": 0.737,
+  "OSTA_pooled": 0.798,
+  "DeLong_men_M4_vs_OSTA_p": 0.084,
+  "DeLong_women_p": "<0.0001",
+  "DeLong_pooled_p": "<0.0001",
+  "delta_AUC_women_minus_men": 0.056,
+  "CI": [
+   0.027,
+   0.086
+  ],
+  "direction_prop": 1.0,
+  "two_sided_p": "<0.001",
+  "interaction_p": "<0.0001",
+  "men_year_AUC": {
+   "2009": 0.757,
+   "2010": 0.687,
+   "2011": 0.742
+  },
+  "men_asia_ref_AUC": 0.755,
+  "men_asia_ref_OSTA": 0.771
+ },
+ "calibration_men": {
+  "raw_mean_pred": 0.078,
+  "observed": 0.138,
+  "CITL_gap_pp": -6.0,
+  "Brier_raw": 0.114,
+  "Brier_intercept_updated": 0.108,
+  "b_star": 0.672,
+  "note": "男性低估 vs 女性高估(+13.4pp)：均值偏移性别依赖"
+ },
+ "cross_national_sex_heterogeneity": {
+  "China_M1_delta": 0.225,
+  "China_CI": [
+   0.027,
+   0.427
+  ],
+  "China_interaction_p": 0.0026,
+  "Korea_M4_delta": 0.056,
+  "Korea_CI": [
+   0.027,
+   0.086
+  ],
+  "Korea_interaction_p": "<0.0001",
+  "interpretation": "方向跨国复现（女>男），幅度韩国显著更小→中国大差距部分源于小样本/病例组合"
+ },
+ "gate": "男性n=3154≥300 且事件436≥30 → 按预设规则进主文",
+ "sanity": "M4韩国女性0.784 ≈ M3的0.787（+sex变量无损害）",
+ "unavailable": "KNHANES提取无neu/lym/alb/ua/alp→M1口径15变量对称检验不可行（已记录为局限）"
+}

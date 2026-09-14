@@ -1,0 +1,62 @@
+{
+  "features": [
+    "age",
+    "bmi",
+    "wbc",
+    "hb",
+    "ast",
+    "tc",
+    "fbg",
+    "egfr"
+  ],
+  "intercept": -0.4536270053146678,
+  "coefficients": {
+    "age": 1.0472,
+    "bmi": -0.7469,
+    "wbc": 0.1311,
+    "hb": 0.0186,
+    "ast": 0.0728,
+    "tc": 0.0597,
+    "fbg": -0.0586,
+    "egfr": 0.3449
+  },
+  "scaler_mean": {
+    "age": 59.5865,
+    "bmi": 29.3417,
+    "wbc": 6.6799,
+    "hb": 134.7218,
+    "ast": 24.9706,
+    "tc": 5.2817,
+    "fbg": 6.0815,
+    "egfr": 86.1253
+  },
+  "scaler_scale": {
+    "age": 12.2671,
+    "bmi": 6.742,
+    "wbc": 2.1462,
+    "hb": 13.1762,
+    "ast": 14.533,
+    "tc": 1.0607,
+    "fbg": 2.0673,
+    "egfr": 20.3673
+  },
+  "training_set": "NHANES女性 n=2653 (scaler均值已逐位核验)",
+  "units": "SI (hb g/L, tc mmol/L, fbg mmol/L)",
+  "class_weight": {
+    "w1": 3.4908,
+    "w0": 0.5836,
+    "rule": "sklearn balanced: w_j = n / (2 * n_j); n=2653, events=380, non-events=2273 (frozen women-only training counts)",
+    "verification": "formula reproduces frozen M1/M4 all-sex weights exactly (5217/(2*492)=5.3018; 5217/(2*4725)=0.5521)"
+  },
+  "impute_constants_NHANES_women_median": {
+    "age": 60.0,
+    "bmi": 28.31,
+    "wbc": 6.4,
+    "hb": 136.0,
+    "ast": 22.0,
+    "tc": 5.22,
+    "fbg": 5.55,
+    "egfr": 89.6
+  },
+  "impute_constants_verification": "extracted from frozen women-only training data (NHANES分析集v4_主模型.csv, 性别==2, n=2653); validated by exactly reproducing the frozen M3 scaler means (max abs error 2.5e-05 across all 8 predictors)"
+}

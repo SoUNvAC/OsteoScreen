@@ -1,0 +1,26 @@
+# ============================================================================
+# PRIVACY / RELEASE-SAFETY GUARDS — do not weaken these rules.
+# This public archive must never contain patient-level Chinese-cohort data,
+# per-case KNHANES-derived records (pending KDCA licence confirmation), or
+# regenerated per-case prediction files. See EXCLUDED_FILES_LOG.md.
+# ============================================================================
+
+# Restricted cohort inputs (NOT distributed; required only for local reruns)
+data/china_external_v4.xlsx
+data/korea_knhanes_women_v1.csv
+data/*.xlsx
+data/korea_*.csv
+
+# Regenerated per-case prediction / label files (restricted; scripts v1.2.1+
+# persist aggregate curve grids only, but block any legacy-named output too)
+results/dca_data_women.npz
+results/dca_data_korea.npz
+**/dca_data_women.npz
+**/dca_data_korea.npz
+
+# Python noise
+__pycache__/
+*.pyc
+
+# Local environment overrides
+.env

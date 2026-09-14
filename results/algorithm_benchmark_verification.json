@@ -1,0 +1,246 @@
+{
+ "LASSO(L1-LR)": {
+  "rerun": {
+   "delta_auc": 0.0,
+   "ci95": [
+    -0.001,
+    0.002
+   ],
+   "P_better_than_LR": 0.644,
+   "china_auc": 0.745
+  },
+  "frozen": {
+   "delta_auc": 0.0,
+   "ci95": [
+    -0.001,
+    0.002
+   ],
+   "P_better_than_LR": 0.646
+  },
+  "abs_err_delta": 0.0,
+  "判定": "一致"
+ },
+ "弹性网络LR": {
+  "rerun": {
+   "delta_auc": 0.0,
+   "ci95": [
+    -0.001,
+    0.002
+   ],
+   "P_better_than_LR": 0.552,
+   "china_auc": 0.745
+  },
+  "frozen": {
+   "delta_auc": 0.0,
+   "ci95": [
+    -0.001,
+    0.001
+   ],
+   "P_better_than_LR": 0.597
+  },
+  "abs_err_delta": 0.0,
+  "判定": "一致"
+ },
+ "随机森林": {
+  "rerun": {
+   "delta_auc": -0.016,
+   "ci95": [
+    -0.072,
+    0.033
+   ],
+   "P_better_than_LR": 0.278,
+   "china_auc": 0.729
+  },
+  "frozen": {
+   "delta_auc": -0.019,
+   "ci95": [
+    -0.07,
+    0.034
+   ],
+   "P_better_than_LR": 0.227
+  },
+  "abs_err_delta": 0.003,
+  "判定": "一致"
+ },
+ "XGBoost": {
+  "rerun": {
+   "delta_auc": -0.02,
+   "ci95": [
+    -0.067,
+    0.023
+   ],
+   "P_better_than_LR": 0.202,
+   "china_auc": 0.725
+  },
+  "frozen": {
+   "delta_auc": -0.022,
+   "ci95": [
+    -0.083,
+    0.04
+   ],
+   "P_better_than_LR": 0.236
+  },
+  "abs_err_delta": 0.002,
+  "判定": "一致"
+ },
+ "LightGBM": {
+  "rerun": {
+   "delta_auc": -0.041,
+   "ci95": [
+    -0.101,
+    0.014
+   ],
+   "P_better_than_LR": 0.075,
+   "china_auc": 0.704
+  },
+  "frozen": {
+   "delta_auc": -0.034,
+   "ci95": [
+    -0.092,
+    0.023
+   ],
+   "P_better_than_LR": 0.108
+  },
+  "abs_err_delta": 0.007,
+  "判定": "误差带内"
+ },
+ "CatBoost": {
+  "rerun": {
+   "delta_auc": -0.021,
+   "ci95": [
+    -0.074,
+    0.027
+   ],
+   "P_better_than_LR": 0.208,
+   "china_auc": 0.725
+  },
+  "frozen": {
+   "delta_auc": -0.014,
+   "ci95": [
+    -0.062,
+    0.036
+   ],
+   "P_better_than_LR": 0.304
+  },
+  "abs_err_delta": 0.007,
+  "判定": "误差带内"
+ },
+ "SVM-RBF": {
+  "rerun": {
+   "delta_auc": -0.052,
+   "ci95": [
+    -0.118,
+    0.005
+   ],
+   "P_better_than_LR": 0.04,
+   "china_auc": 0.693
+  },
+  "frozen": {
+   "delta_auc": -0.053,
+   "ci95": [
+    -0.117,
+    0.009
+   ],
+   "P_better_than_LR": 0.043
+  },
+  "abs_err_delta": 0.001,
+  "判定": "一致"
+ },
+ "kNN(k=15)": {
+  "rerun": {
+   "delta_auc": -0.044,
+   "ci95": [
+    -0.115,
+    0.023
+   ],
+   "P_better_than_LR": 0.094,
+   "china_auc": 0.7
+  },
+  "frozen": {
+   "delta_auc": -0.044,
+   "ci95": [
+    -0.112,
+    0.026
+   ],
+   "P_better_than_LR": 0.107
+  },
+  "abs_err_delta": 0.0,
+  "判定": "一致"
+ },
+ "朴素贝叶斯": {
+  "rerun": {
+   "delta_auc": -0.018,
+   "ci95": [
+    -0.056,
+    0.021
+   ],
+   "P_better_than_LR": 0.17,
+   "china_auc": 0.727
+  },
+  "frozen": {
+   "delta_auc": -0.018,
+   "ci95": [
+    -0.055,
+    0.019
+   ],
+   "P_better_than_LR": 0.178
+  },
+  "abs_err_delta": 0.0,
+  "判定": "一致"
+ },
+ "QDA": {
+  "rerun": {
+   "delta_auc": -0.068,
+   "ci95": [
+    -0.139,
+    -0.006
+   ],
+   "P_better_than_LR": 0.016,
+   "china_auc": 0.678
+  },
+  "frozen": {
+   "delta_auc": -0.067,
+   "ci95": [
+    -0.134,
+    -0.003
+   ],
+   "P_better_than_LR": 0.02
+  },
+  "abs_err_delta": 0.001,
+  "判定": "一致"
+ },
+ "MLP(32-16)": {
+  "rerun": {
+   "delta_auc": -0.055,
+   "ci95": [
+    -0.148,
+    0.032
+   ],
+   "P_better_than_LR": 0.107,
+   "china_auc": 0.688
+  },
+  "frozen": {
+   "delta_auc": -0.016,
+   "ci95": [
+    -0.107,
+    0.076
+   ],
+   "P_better_than_LR": 0.369
+  },
+  "abs_err_delta": 0.039,
+  "判定": "超差"
+ },
+ "_meta": {
+  "重建核验日期": "2026-09-13",
+  "bootstrap": "B=2000, RandomState(42), 中国全量n=190",
+  "max_abs_err_delta": 0.039,
+  "结论复现": {
+   "无一模型优于LR": true,
+   "QDA显著更差(CI不跨零)": true,
+   "SVM边缘(P≈0.04)": true
+  },
+  "地位": "重建核验版——原始脚本随会话丢失；本脚本与冻结档案逐模型比对一致后归档",
+  "文件修复": "2026-09-13：修复文件尾部单一杂散坏字节(0xB6)导致的非法UTF-8/JSON；全部数值与判定内容未改动。",
+  "MLP说明": "本JSON记录max_iter=3000敏感性运行(Δ=−0.055, 超差0.039)；归档配置采用sklearn默认max_iter=200，该运行Δ=−0.022 vs冻结−0.016(误差0.006, 带内)。MLP对训练长度敏感，冻结值对应未收敛运行——不改变任何结论。"
+ }
+}

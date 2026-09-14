@@ -1,0 +1,98 @@
+{
+  "QDA": {
+    "delta_auc": -0.067,
+    "ci95": [
+      -0.134,
+      -0.003
+    ],
+    "P_better_than_LR": 0.02
+  },
+  "SVM-RBF": {
+    "delta_auc": -0.053,
+    "ci95": [
+      -0.117,
+      0.009
+    ],
+    "P_better_than_LR": 0.043
+  },
+  "kNN(k=15)": {
+    "delta_auc": -0.044,
+    "ci95": [
+      -0.112,
+      0.026
+    ],
+    "P_better_than_LR": 0.107
+  },
+  "LightGBM": {
+    "delta_auc": -0.034,
+    "ci95": [
+      -0.092,
+      0.023
+    ],
+    "P_better_than_LR": 0.108
+  },
+  "XGBoost": {
+    "delta_auc": -0.022,
+    "ci95": [
+      -0.083,
+      0.04
+    ],
+    "P_better_than_LR": 0.236
+  },
+  "随机森林": {
+    "delta_auc": -0.019,
+    "ci95": [
+      -0.07,
+      0.034
+    ],
+    "P_better_than_LR": 0.227
+  },
+  "朴素贝叶斯": {
+    "delta_auc": -0.018,
+    "ci95": [
+      -0.055,
+      0.019
+    ],
+    "P_better_than_LR": 0.178
+  },
+  "MLP(32-16)": {
+    "delta_auc": -0.016,
+    "ci95": [
+      -0.107,
+      0.076
+    ],
+    "P_better_than_LR": 0.369
+  },
+  "CatBoost": {
+    "delta_auc": -0.014,
+    "ci95": [
+      -0.062,
+      0.036
+    ],
+    "P_better_than_LR": 0.304
+  },
+  "弹性网络LR": {
+    "delta_auc": 0.0,
+    "ci95": [
+      -0.001,
+      0.001
+    ],
+    "P_better_than_LR": 0.597
+  },
+  "LASSO(L1-LR)": {
+    "delta_auc": 0.0,
+    "ci95": [
+      -0.001,
+      0.002
+    ],
+    "P_better_than_LR": 0.646
+  },
+  "_meta": {
+    "cohort": "中国全量n=190",
+    "B": 2000,
+    "seed": 42,
+    "coverage": "完整11模型(含XGBoost 3.4.1 / CatBoost 1.2.10, 本轮全部重跑)",
+    "结论": "无模型显著优于LR; QDA显著劣于LR(Δ=-0.067, CI不跨0); SVM-RBF边缘(P=0.04)",
+    "女性亚组补充(v5冻结)": "XGB vs LR Δ=-0.092 (95%CI -0.185~-0.002) 显著"
+  }
+}

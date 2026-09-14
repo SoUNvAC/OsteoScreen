@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: >-
+  If you use this reproducibility archive, please cite the
+  associated manuscript as below.
+title: >-
+  Transportability of routine laboratory–based osteoporosis
+  prediction from the USA to China and South Korea: a
+  three-cohort study of external validation and recalibration
+  — reproducibility archive
+authors:
+  - family-names: Wu
+    given-names: Ziyi
+    affiliation: >-
+      Department of Orthopaedics (Ward 1), Second Hospital of
+      Harbin Medical University, Harbin, China
+  - family-names: Zhang
+    given-names: Haichuan
+    affiliation: Chengdu University of Technology, Chengdu, China
+  - family-names: Du
+    given-names: Linkang
+    affiliation: >-
+      Department of Orthopaedics (Ward 1), Second Hospital of
+      Harbin Medical University, Harbin, China
+  - family-names: Yu
+    given-names: Jiaze
+    affiliation: >-
+      Department of Orthopaedics (Ward 1), Second Hospital of
+      Harbin Medical University, Harbin, China
+  - family-names: Wang
+    given-names: Faxin
+    affiliation: >-
+      Department of Orthopaedics (Ward 1), Second Hospital of
+      Harbin Medical University, Harbin, China
+  - family-names: Gao
+    given-names: Feng
+    affiliation: >-
+      Department of Orthopaedics (Ward 1), Second Hospital of
+      Harbin Medical University, Harbin, China
+    email: gaofeng19761222@163.com
+version: 1.2.4
+date-released: 2026-09-13
+keywords:
+  - osteoporosis
+  - prediction model
+  - external validation
+  - transportability
+  - calibration
+  - recalibration
+  - NHANES
+  - KNHANES
+  - logistic regression
+# repository-code and doi fields are intentionally omitted: the GitHub
+# URL and the Zenodo DOI do not exist yet. After the release is created,
+# back-fill both here, in README.md, and in the manuscript / Supplement
+# data-sharing statements (see ZENODO_RELEASE_CHECKLIST.md).

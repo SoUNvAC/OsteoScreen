@@ -1,0 +1,40 @@
+Software environment — version evidence
+=======================================
+Archive date: 2026-09-13
+
+Versions verified in the analysis/archive environment on 2026-09-13
+(the same environment lineage in which all frozen analyses were run,
+ 2026-09-07 to 2026-09-13):
+
+  Python        3.12.12   verified 2026-09-13
+  numpy         2.2.5     verified 2026-09-13
+  pandas        2.3.2     verified 2026-09-13
+  scipy         1.16.2    verified 2026-09-13
+  scikit-learn  1.7.2     verified 2026-09-13
+  statsmodels   0.14.5    verified 2026-09-13
+  matplotlib    3.10.3    verified 2026-09-13
+  openpyxl      3.1.5     verified 2026-09-13
+  lightgbm      4.6.0     verified 2026-09-13 (archive environment)
+
+Versions from archived frozen-run metadata (algorithm benchmark,
+results/algorithm_benchmark_bootstrap_results.json, "_meta" field):
+
+  xgboost       3.4.1     recorded in frozen benchmark metadata
+  catboost      1.2.10    recorded in frozen benchmark metadata
+
+Flagged as to-be-verified (待核):
+  lightgbm      the exact lightgbm version used in the frozen benchmark
+                round was not separately recorded in the archived metadata;
+                4.6.0 is the version present in the archive environment.
+  xgboost / catboost were not importable in the final archive environment
+  at packaging time; their pinned versions above come from the frozen
+  benchmark metadata, not from a live re-check.
+
+Notes
+-----
+* The benchmark script (analysis/algorithm_benchmark_reconstructed.py)
+  wraps lightgbm/xgboost/catboost imports in try/except and runs the
+  remaining members if any library is missing; its output header reports
+  which members were actually evaluated.
+* No GPU or platform-specific dependency is used anywhere.
+* All scripts are CPU-only and OS-independent (Linux/macOS/Windows).

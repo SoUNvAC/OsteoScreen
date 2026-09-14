@@ -1,0 +1,42 @@
+{
+  "item": "Korea M3 Tier 1b: analytic class-prior correction (final consistency-audit addition)",
+  "date": "2026-09-13",
+  "sanction": "GPT final consistency audit P1-1: the single approved analysis unlock; deterministic transformation of frozen M3 predictions, no refitting, no tuning",
+  "formula": "p_natural = expit(logit(p_balanced) - log(w1/w0))",
+  "class_weight": {
+    "w1": 3.4908,
+    "w0": 0.5836,
+    "log_ratio": 1.7886703986405257
+  },
+  "cohort": "KNHANES women (M3), n=4053, events=1868",
+  "results": {
+    "tier0_raw": {
+      "MCE": 0.1339,
+      "Brier": 0.2124,
+      "note": "frozen"
+    },
+    "tier1a_platt": {
+      "MCE": -0.2343,
+      "Brier": 0.2592,
+      "note": "frozen"
+    },
+    "tier2_literature": {
+      "Brier": 0.2022,
+      "note": "frozen"
+    },
+    "tier3_cohort": {
+      "Brier": 0.1929,
+      "note": "frozen"
+    },
+    "tier1b_analytic_correction": {
+      "MCE": -0.2294,
+      "Brier": 0.255,
+      "mean_predicted": 0.2315,
+      "observed_prevalence": 0.4609,
+      "slope": 1.64,
+      "note": "logit shift leaves slope unchanged (unpenalised GLM: raw 1.6361); overshoots to underestimation"
+    }
+  },
+  "interpretation": "Both source-only corrections (Platt 0.259; analytic correction 0.255) worsened the Korean Brier score vs raw 0.212; only target-anchored intercept updating improved it (0.202/0.193). The balanced-weight class-prior shift alone does not account for the Korean miscalibration; these comparisons do not identify a unique mechanism.",
+  "version_note": "v2 (2026-09-13): terminology unified to 'correction'; slope reported under the unpenalised-GLM convention (1.64, identical to raw by construction of the logit shift). Values unchanged from v1; v1 superseded."
+}

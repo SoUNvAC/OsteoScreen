@@ -1,0 +1,131 @@
+{
+  "frozen_checksums": {
+    "china_M1": {
+      "AUC": 0.7448,
+      "MCE": 0.3133,
+      "Brier": 0.2908
+    },
+    "korea_M3": {
+      "AUC": 0.7874,
+      "MCE": 0.1339,
+      "Brier": 0.2124
+    },
+    "M1_OOF_AUC": 0.8032,
+    "M3_women_OOF_AUC": 0.7778
+  },
+  "slopes_unpenalised_GLM": {
+    "china_raw": 0.7154,
+    "korea_raw": 1.6361,
+    "china_Tier1a_logitscale": 0.7494,
+    "korea_Tier1a_logitscale": 1.7454,
+    "china_Tier1a_probscale": 0.7608,
+    "korea_Tier1a_probscale": 1.7582,
+    "china_Tier1a_logitscale_penalised_reference": 0.7304,
+    "korea_Tier1a_logitscale_penalised_reference": 1.7386
+  },
+  "intercept_shift_slope_invariance": {
+    "china": {
+      "shift": -1.7706,
+      "slope_after_shift": 0.715361,
+      "slope_raw": 0.715361
+    },
+    "korea": {
+      "shift": -0.6125,
+      "slope_after_shift": 1.636145,
+      "slope_raw": 1.636145
+    }
+  },
+  "Tier1a_scale_fork": {
+    "china_brier_logitscale": 0.169477,
+    "china_brier_probscale": 0.177361,
+    "korea_brier_logitscale": 0.259236,
+    "korea_brier_probscale": 0.260905,
+    "frozen_archived": {
+      "china": 0.169,
+      "korea": 0.259
+    },
+    "conclusion": "冻结归档值 0.169/0.259 与 logit 尺度实现一致（另经归档 eFigure S4 DCA 曲线逐点核对，最大差 0.0/0.00025）；仓库脚本旧概率尺度实现 (0.177/0.261) 已在 _v2 修正为 logit 尺度。"
+  },
+  "bootstrap_95CI_2000_seed42": {
+    "china_M1": {
+      "MCE": [
+        0.2538,
+        0.3741
+      ],
+      "slope": [
+        0.3803,
+        1.1761
+      ],
+      "Brier_raw": [
+        0.2547,
+        0.33
+      ],
+      "Brier_T2": [
+        0.1353,
+        0.2116
+      ],
+      "Brier_T3": [
+        0.1328,
+        0.2005
+      ],
+      "improve_T2": [
+        0.0667,
+        0.1704
+      ],
+      "improve_T3": [
+        0.0859,
+        0.1716
+      ]
+    },
+    "korea_women_M3": {
+      "MCE": [
+        0.1203,
+        0.1472
+      ],
+      "slope": [
+        1.5228,
+        1.7524
+      ],
+      "Brier_raw": [
+        0.2076,
+        0.2174
+      ],
+      "Brier_T2": [
+        0.1974,
+        0.2081
+      ],
+      "Brier_T3": [
+        0.1888,
+        0.197
+      ],
+      "improve_T2": [
+        0.003,
+        0.0159
+      ],
+      "improve_T3": [
+        0.0158,
+        0.0232
+      ]
+    },
+    "note": "Tier3 按各重采样患病率重锚定；Tier2 在固定文献锚点（中国 0.192／韩国 0.37）下对重采样预测重解位移；百分位法 2.5/97.5。"
+  },
+  "survey_weight_sensitivity": {
+    "M1_china_AUC": 0.7522,
+    "M1_delta_vs_0.7448": 0.0074,
+    "M2_china_women_AUC": 0.8232,
+    "M2_delta_vs_0.818": 0.0052,
+    "M1_china_AUC_mean1_normalised": 0.7523,
+    "M2_china_women_AUC_mean1_normalised": 0.8242,
+    "note": "WTMEC2YR × balanced 类权重。规范化（mean=1）与未规范化结果相差 ≤0.001（0.7523 vs 0.7522；0.8242 vs 0.8232）；落文采用规范化口径：M1 0.745→0.752、M2 0.818→0.824，变化 ≤0.008。"
+  },
+  "china_women_8var_symmetry_unpenalised": {
+    "n": 116,
+    "AUC": 0.7656,
+    "Brier_raw": 0.2506,
+    "intercept_shift_b": -1.2989,
+    "calib_intercept_pre": -1.4828,
+    "calib_intercept_post": 0.1535,
+    "calib_slope": 1.2597,
+    "note": "替代旧惩罚 LR 口径（−1.42→0.10，斜率 1.17）；无惩罚 GLM 为 −1.48→0.15，斜率 1.26。"
+  }
+}

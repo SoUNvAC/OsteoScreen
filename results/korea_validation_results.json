@@ -1,0 +1,97 @@
+{
+  "primary_label_nhanes_ref": {
+    "prevalence": 0.4609,
+    "events": 1868,
+    "model_auc": 0.787,
+    "model_ci": [
+      0.774,
+      0.801
+    ],
+    "osta_auc": 0.8,
+    "osta_ci": [
+      0.787,
+      0.814
+    ],
+    "delta": -0.013,
+    "delong_p": 0.0003
+  },
+  "sensitivity_label_asia_ref": {
+    "prevalence": 0.3341,
+    "events": 1354,
+    "model_auc": 0.798,
+    "model_ci": [
+      0.783,
+      0.812
+    ],
+    "osta_auc": 0.81,
+    "osta_ci": [
+      0.796,
+      0.824
+    ],
+    "delta": -0.012,
+    "delong_p": 0.001
+  },
+  "calibration": {
+    "observed_prev": 0.4609,
+    "mean_pred_raw": 0.595,
+    "intercept_shift_b": -0.613,
+    "mean_pred_calibrated": 0.4609
+  },
+  "extended": {
+    "locked_threshold": {
+      "NHANES女性OOF_Youden": 0.502,
+      "韩国映射阈值": 0.353
+    },
+    "threshold_metrics": {
+      "模型_校正后": {
+        "敏感": 0.875,
+        "特异": 0.481,
+        "PPV": 0.591,
+        "NPV": 0.819,
+        "NNS": 8.1
+      },
+      "OSTA_at_-1": {
+        "敏感": 0.752,
+        "特异": 0.714,
+        "PPV": 0.692,
+        "NPV": 0.771,
+        "NNS": 5.2
+      }
+    },
+    "auprc": 0.758,
+    "brier_raw": 0.212,
+    "brier_calibrated": 0.193,
+    "calibration_slope_calibrated": 1.63,
+    "subgroups_auc": {
+      "2009": 0.801,
+      "2010": 0.783,
+      "2011": 0.761,
+      "50-59岁": 0.702,
+      "60-69岁": 0.663,
+      "70-80岁": 0.7,
+      "已绝经": 0.771,
+      "其他": 0.81
+    }
+  },
+  "china_women_8var_symmetry": {
+    "n": 116,
+    "model_auc": 0.766,
+    "osta_auc": 0.792,
+    "brier_raw": 0.251,
+    "brier_calibrated": 0.175,
+    "b_star": -1.299
+  },
+  "cohort": "KNHANES 2009-2011, women >=50",
+  "n": 4053,
+  "years": {
+    "2009": 1813,
+    "2010": 1564,
+    "2011": 676
+  },
+  "age_range": [
+    50,
+    80
+  ],
+  "model": "简约8变量LR (age,bmi,wbc,hb,ast,tc,fbg,egfr), SI单位",
+  "units_note": "scaler拟合于SI单位(hb g/L, tc mmol/L, fbg mmol/L); 误用mg/dL列→AUC 0.59假象, 已排雷"
+}
